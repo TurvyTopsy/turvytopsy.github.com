@@ -1,0 +1,12 @@
+<article class="item">
+    <header>
+        <div class="cat">{{ page.category }}</div><h3>{{ page.title }}</h3>
+    </header>
+    <div class="clearfix">
+		{{ page.content | split: '<!--cut-->' | first }}
+	</div>
+    <footer>
+		{% capture exts %}{{ page.exturl | size }}{% endcapture %}
+        <div class="descr">posted by <address>{{ page.author }}</address> on {{ page.date | date: '%Y-%m-%d %H:%M' }}</div><a href="{% if exts == '0' %}{{ page.url }}{% else %}{{ page.exturl }}{% endif %}" class="more">game site</a>
+    </footer>
+</article>

@@ -1,0 +1,11 @@
+---
+layout: default
+title: News
+menu: news
+---
+{% capture offs %}{{ paginator.page | minus:1 | times:paginator.per_page }}{% endcapture %}{% for page in site.categories.news limit:paginator.per_page offset:offs %}{% include shortpost.html %}{% endfor %}{% capture offs2 %}{{ paginator.page | times:paginator.per_page }}{% endcapture %}{% for page in site.categories.news limit:1 offset:offs2 %}{% assign cntr = '1' %}{% endfor %}{% if cntr == '1' or paginator.previous_page %}
+<div class="navi">
+  {% if cntr == '1' %}<a href="/page{{ paginator.next_page }}" class="prv" title="Older articles">&#9664;</a>{% endif %}
+  {% if paginator.previous_page %}<a href="{% if paginator.previous_page == 1 %}/{% else %}/page{{ paginator.previous_page }}{% endif %}" class="nxt" title="Newer articles">&#9654;</a>{% endif %}
+</div>{% else %}
+<hr>{% endif %}

@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<article class="item">
+    <header>
+        <div class="cat">{{ page.category }}</div><h3>{{ page.title }}</h3>
+    </header>
+    <div class="clearfix">
+        {{ content | remove: '<!--cut-->' }}
+	</div>
+    <footer>
+        <div class="descr">posted by <address>{{ page.author }}</address> on {{ page.date | date: '%Y-%m-%d %H:%M' }}</div><a href="{{ page.url }}" class="more">permalink</a>
+    </footer>
+</article>
+<hr>

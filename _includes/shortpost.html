@@ -1,0 +1,9 @@
+<article class="item">
+    <header>
+        <div class="cat">{{ page.category }}</div><h3>{{ page.title }}</h3>
+    </header>
+    <div class="clearfix">{% capture pcs %}{{ page.content | split: '<!--cut-->' | size }}{% endcapture %}{% capture pc1 %}{{ page.content | split: '<!--cut-->' | first }}{% endcapture %}{% capture pc2 %}{{ page.content | split: '<!--cut-->' | last | size }}{% endcapture %}{{ pc1 }}</div>
+    <footer>
+        <div class="descr">posted by <address>{{ page.author }}</address> on {{ page.date | date: '%Y-%m-%d %H:%M' }}</div><a href="{{ page.url }}" class="more">{% if pcs == '1' or pc2 == '1' %}permalink{% else %}more...{% endif %}</a>
+    </footer>
+</article>
