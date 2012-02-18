@@ -1,6 +1,5 @@
-a{{ page.content | first }}
-b{{ page.content | last }}
-c{{ page.content | split: '<!--cut-->' }}
+a{{ page.content | first | size }}
+b{{ page.content | size }}
 <article class="item">
     <header>
         <div class="cat">{{ page.category }}</div><h3>{{ page.title }}</h3>
