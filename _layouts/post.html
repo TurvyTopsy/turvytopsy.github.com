@@ -6,7 +6,7 @@ layout: default
         <div class="cat">{{ page.category }}</div><h3>{{ page.title }}</h3>
     </header>
     <div class="clearfix">
-        {{ content | remove: '<!--cut-->' }}
+        {{ content }}
 	</div>
     <footer>
         <div class="descr">posted by <address>{{ page.author }}</address> on {{ page.date | date: '%Y-%m-%d %H:%M' }}</div><a href="{{ page.url }}" class="more">permalink</a>

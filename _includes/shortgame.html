@@ -3,7 +3,7 @@
         <div class="cat">{{ page.category }}</div><h3>{{ page.title }}</h3>
     </header>
     <div class="clearfix">
-		{{ page.content | split: '<!--cut-->' | first }}
+		{{ page.content | first }}
 	</div>
     <footer>
 		{% capture exts %}{{ page.exturl | size }}{% endcapture %}
