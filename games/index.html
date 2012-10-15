@@ -1,11 +1,67 @@
----
-layout: default
-title: Games
-menu: games
----
-{% assign currentnr = 1 %}{% capture prevnr %}{{ currentnr | minus: 1 }}{% endcapture %}{% capture nextnr %}{{ currentnr | plus: 1 }}{% endcapture %}{% capture offs %}{{ currentnr | minus:1 | times:paginator.per_page }}{% endcapture %}{% for page in site.categories.games limit:paginator.per_page offset:offs %}{% include shortgame.html %}{% endfor %}{% capture offs2 %}{{ currentnr | times:paginator.per_page }}{% endcapture %}{% for page in site.categories.games limit:1 offset:offs2 %}{% assign cntr = '1' %}{% endfor %}{% if cntr == '1' or prevnr != '0' %}
-<div class="navi">
-  {% if cntr == '1' %}<a href="/games/page{{ nextnr }}" class="prv" title="Older games">&#9664;</a>{% endif %}
-  {% if prevnr != '0' %}<a href="{% if prevnr == '1' %}/games{% else %}/games/page{{ prevnr }}{% endif %}" class="nxt" title="Newer games">&#9654;</a>{% endif %}
-</div>{% else %}
-<hr>{% endif %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		
+        <title>Games - Turvy Topsy</title>
+        <meta name="description" content="Turvy Topsy Video Game Development">
+		<meta name="keywords" content="game, videogame, indie, turvy, topsy, one-man, gaming, development">
+		<meta name="author" content="Lafie">	
+		
+        <meta name="viewport" content="width=device-width">
+
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600">
+        <link rel="stylesheet" href="/static/css/normalize.min.css">
+        <link rel="stylesheet" href="/static/css/main.min.css">
+
+        <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
+		<header class="navi">
+			<div class="container">
+				<h1><a class="title" href="http://turvytopsy.com"><sup class="ttsup">Turvy</sup>Topsy<sup class="btsup">beta</sup></a></h1>
+				<nav>
+					<ul class="nav">
+						<li class="navli"><a href="/">News</a>
+						<li class="navli"><a href="/about">About</a>
+						<li class="navli active"><a href="/games">Games</a>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		
+		<div class="main container">
+			<div class="focus">
+	<h2>Games</h2>
+	<div class="cntr">
+		<div class="gamenfo">
+			<figure class="gamefig">
+				<h3><a class="gmtl" href="/games/mambajs">MambaJS</a></h3>
+				<a href="/games/mambajs"><img src="http://i.imgur.com/YNJw6.png" alt="MambaJS" title="MambaJS"></a>
+			</figure>
+			<p>
+				MambaJS is a javascript remake of 1989 DOS game Mamba, a small arcade game. It somewhat resembles Snake, but has some surprising twists. 
+			</p>
+		</div>
+	</div>
+</div>
+		</div>
+		
+		<footer class="container">
+			<span class="cpr">&copy; 2012 Turvy Topsy</span><span class="theme">Theme by <em>Lafie</em></span>
+		</footer>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <script src="//balupton.github.com/history.js/scripts/bundled/html5/jquery.history.js"></script>
+        <script src="/static/js/ajaxify.min.js"></script>
+		
+	</body>
+</html>

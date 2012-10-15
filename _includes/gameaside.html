@@ -1,2 +1,0 @@
-<h4>{{ page.title }} Media <span class="arw">&#9660;</span></h4>
-{% assign gametitle = page.title %}{% assign cnt = '' %}{% for page in site.categories.media %}{% capture sz %}{{ cnt | size }}{% endcapture %}{% if page.game == gametitle and sz != '6' %}{% include mediafig.html %}{% capture cnt %}{{ cnt }}1{% endcapture %}{% endif %}{% endfor %}
