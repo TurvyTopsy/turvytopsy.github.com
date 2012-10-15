@@ -227,11 +227,9 @@ footer.container {
 }
 
 .status {
-	text-align: left;
+	font-weight: 300;
 	font-size: 1.2em;
-	letter-spacing: -1px;
 	color: #eee;
-	line-height: 1.4em;
 }
 
 .twitlnk {
