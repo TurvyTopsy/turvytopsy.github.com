@@ -73,7 +73,6 @@ textarea {
 	min-width: 400px;
 	max-width: 960px;
 	margin: 0 auto;
-	overflow:hidden;
 	text-align: center;
 }   
    
@@ -138,9 +137,9 @@ address {
 }
 
 figure {
-	border: solid 10px #333;
+	border: solid 10px #ddd;
 	border-radius: 4px;
-	background: #333;
+	background: #ddd;
 	margin: 1em;
 }
 
@@ -149,7 +148,6 @@ img {
 }
 
 figcaption {
-	color: #fff;
 	padding: 10px 0 0;
 }
 
@@ -174,7 +172,7 @@ figcaption {
    
 body {
 	font: 0.8em 'Open Sans', Helvetica, arial, sans-serif;
-	background: rgb(20,20,20);	
+	background: #bbb;
 	margin: 0;
 	padding: 0;
 }
@@ -202,6 +200,7 @@ footer.container {
 	border-width: 4px;
 	width: 232px;
 	margin-left: auto;
+	box-shadow: 0px 0px 10px 0px #000;
 }
 
 .twitter {
@@ -229,7 +228,6 @@ footer.container {
 .status {
 	font-weight: 300;
 	font-size: 1.2em;
-	color: #eee;
 }
 
 .twitlnk {
@@ -247,6 +245,7 @@ footer.container {
 	margin: 0 10px 0 0;
 	vertical-align: top;
 	border-width: 4px;
+	box-shadow: 0px 0px 10px 0px #000;
 }
 
 nav {
@@ -301,6 +300,7 @@ nav {
 	padding: 10px 0;
 	background: #eee;
 	border-radius: 10px;
+	box-shadow: 0px 0px 10px 0px #000 inset;
 }
 
 .media {
@@ -311,8 +311,8 @@ nav {
 }
 
 article {
-	margin: 0;
-	padding: 30px;
+	margin: 0 30px;
+	padding: 30px 0;
 	border-style: solid none;
 	border-width: 1px;
 	border-top-color: #fff;
@@ -334,7 +334,7 @@ article:only-child {
 .pagi {
 	display: block;
 	font-size: 5em;
-	padding: 0 30px;
+	margin: 0 30px;
 	line-height: 1em;
 	border-top: 1px solid #fff;
 }
@@ -353,10 +353,6 @@ article:only-child {
 
 .nxt:hover {
 	text-decoration: none;
-}
-
-.twitter .feedload {
-	color: #222;
 }
 
 .artinf {
@@ -386,6 +382,7 @@ article:only-child {
 	margin: 0;
 	width: 100%;
 	border-width: 4px;
+	box-shadow: 0px 0px 10px 0px #000;
 }
 
 .err {
