@@ -173,6 +173,7 @@ figcaption {
 body {
 	font: 0.8em 'Open Sans', Helvetica, arial, sans-serif;
 	background: #bbb;
+	background-image: url('http://i.imgur.com/4t6X7.png');
 	margin: 0;
 	padding: 0;
 }
@@ -192,6 +193,7 @@ footer.container {
 .navi {
 	background: rgb(51,80,196);
 	min-width: 400px;
+	box-shadow: 0 -10px 20px 10px #333;
 }
 
 .sptlght {
@@ -217,6 +219,7 @@ footer.container {
 	list-style-image: none;
 	padding: 0;
 	color: #fff;
+	text-shadow: 1px 1px #666;
 }
 
 .tweet {
@@ -266,6 +269,7 @@ nav {
 
 .active a{
 	color: #fff;
+	text-shadow: 1px 1px #222;
 }
 
 .navli a {
@@ -367,6 +371,10 @@ article:only-child {
 	color: #fff;
 	display: inline-block;
 	text-align: left;
+}
+
+.gamenfo p {
+	text-shadow: 1px 1px #666;
 }
 
 .gmtl {
