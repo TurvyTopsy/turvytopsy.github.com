@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+
+<channel>
+  <title>Turvy Topsy</title>
+  <link>http://turvytopsy.com</link>
+  <description>Turvy Topsy Game (development) news</description>
+  <category>Game development</category>
+  <language>en-us</language>
+  <ttl>120</ttl>
+  <atom:link href="http://my.rsscache.com/turvytopsy.com/rss.xml" rel="self" type="application/rss+xml" />
+
+<item>
+  <title>So pretty...</title>
+  <link>http://turvytopsy.com/2012/10/15/so-pretty/</link>
+  <guid isPermaLink="true">http://turvytopsy.com/2012/10/15/so-pretty/</guid>
+  <pubDate>Mon, 15 Oct 2012 00:27:00 +0100</pubDate>
+  
+  <description>&lt;p&gt;I've now recognized that this website is just a playing ground for me, so I'm going to treat it as such. This means the entire site gets a 'beta' tag, and anything can change at anytime. This includes the content, the design, or whatever else I decide to play around with. I'm quite happy with the design right now though, so it's not unlikely that it will remain for some time. I still don't have a logo though, which is also a fun project, so expect that next.&lt;/p&gt;
+&lt;p&gt;The site is still hosted on GitHub Pages, which works great for someone not afraid to write articles in raw html. I did run into a problem with GitHub Pages' version of Jekyll and Liquid. Since the Liquid version on GitHub is several versions behind, it doesn't yet support the &lt;em&gt;split&lt;/em&gt; command, which I use to split articles when they are too long to fit on the front page. So unfortunately, I'm forced to generate the site using a local installation of Jekyll, and git push the generated site, instead of letting GitHub generate the site for me. A minor inconvenience, although I can now check the site locally, and it will look exactly the same when synced. That is a nice unforeseen advantage, really.&lt;/p&gt;
+&lt;p&gt;P.S. I've discovered spell-checking in Notepad++, which is great when writing articles in html, you get the syntax highlighting, as well as the spell-checker. The best of both worlds!&lt;/p&gt;</description>
+</item>
+
+<item>
+  <title>Revised Site Design and New Hosting</title>
+  <link>http://turvytopsy.com/2012/02/18/new-site-design/</link>
+  <guid isPermaLink="true">http://turvytopsy.com/2012/02/18/new-site-design/</guid>
+  <pubDate>Sat, 18 Feb 2012 01:17:00 +0100</pubDate>
+  
+  <description>&lt;figure style=&quot;float:right;width:200px;&quot;&gt;
+	&lt;img src=&quot;http://pages.github.com/images/logo-pages.png&quot; alt=&quot;GitHub Pages&quot;&gt;
+	&lt;figcaption&gt;GitHub Pages is great for anyone looking to host static pages for open-source projects or small organizations.&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Although I promised to leave the design of this website alone, some slight style tweaks slipped into the transition to &lt;a href=&quot;http://pages.github.com&quot;&gt;GitHub Pages&lt;/a&gt;. This site used to be hosted on Google App Engine, but since it only requires static pages, GitHub Pages seemed a better fit. So here's to a fresh start on a new service, and I promise to focus on content from now on... really... I mean it... seriously, no more new designs of an empty website.&lt;/p&gt;</description>
+</item>
+
+</channel>
+
+</rss>
