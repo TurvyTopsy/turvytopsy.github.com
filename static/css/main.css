@@ -86,7 +86,7 @@ hr {
 a {
 	color: #000;
 	text-decoration: none;
-	font-weight: 600;
+	font-weight: bold;
 }
 
 a:hover {
@@ -102,6 +102,8 @@ h1 {
 	font-size: 4.5em;
 	font-weight: 300;
 	margin: 25px 20px 0;
+	line-height: 0.9em;
+	padding: 0.2em 0;
 }
 
 h2 {
@@ -118,22 +120,22 @@ h3 {
 	font-size: 2em;
 	line-height: 1em;
 	letter-spacing: -2px;
-	font-weight: 400;	
+	font-weight: normal;
 }
 
 h3 a {
-	font-weight: 400;
+	font-weight: normal;
 }
 
 em {
 	font-style: normal;
-	font-weight: 600;
+	font-weight: bold;
 }
 
 address {
 	display: inline;
 	font-style: normal;
-	font-weight: 600;
+	font-weight: bold;
 }
 
 figure {
@@ -190,6 +192,7 @@ footer.container {
 .navi {
 	background: rgb(51,80,196);
 	min-width: 400px;
+	padding: 0 0 15px;
 	box-shadow: 0 -10px 20px 10px #333;
 }
 
@@ -250,14 +253,15 @@ footer.container {
 
 nav {
 	display: inline-block;
+	vertical-align: bottom;
 	padding: 0;
-	margin: 0 10px 20px;
+	margin: 0 10px;
 	overflow: hidden;
 }
 
 .nav { 	
-	margin: 0;	
-	padding: 0;	
+	margin: 0;
+	padding: 0;
 }
 
 .navli {
@@ -274,10 +278,11 @@ nav {
 	font-size: 2em;
 	font-weight: 300;
 	text-transform: lowercase;
-	padding: 0.6em 1em;
+	padding: 0.8em 1em;
 	border-style: none solid none none;
 	border-width: 1px;
 	border-color: #000;
+	line-height: 0.9em;
 }
 
 .navli:last-child a{
@@ -393,7 +398,7 @@ article:only-child {
 .err {
 	font-size: 5em;
 	color: #fff;
-	font-weight: 600;
+	font-weight: bold;
 }
 
 .errdescr {
