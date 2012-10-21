@@ -219,7 +219,6 @@ footer.container {
 	list-style-image: none;
 	padding: 0;
 	color: #fff;
-	text-shadow: 1px 1px #666;
 }
 
 .tweet {
@@ -270,7 +269,7 @@ nav {
 
 .active a{
 	color: #fff;
-	text-shadow: 1px 1px #222;
+	text-shadow: 1px 1px #000;
 }
 
 .navli a {
@@ -373,10 +372,6 @@ article:only-child {
 	color: #fff;
 	display: inline-block;
 	text-align: left;
-}
-
-.gamenfo p {
-	text-shadow: 1px 1px #666;
 }
 
 .gmtl {
