@@ -269,7 +269,6 @@ nav {
 
 .active a{
 	color: #fff;
-	text-shadow: 1px 1px #000;
 }
 
 .navli a {
@@ -285,6 +284,10 @@ nav {
 }
 
 .navli:last-child a{
+	border: 0;
+}
+
+.navli:only-child a{
 	border: 0;
 }
 
