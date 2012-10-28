@@ -3,15 +3,15 @@
 
 # TEAM
 
-  Owner: Lafie
-  Site: http://turvytopsy.com
-  Twitter: @TurvyTopsyGames
+    Owner: Lafie
+    Site: http://turvytopsy.com
+    Twitter: @TurvyTopsyGames
 
 # THANKS
 
-	Mark Otto
-	Billy Gates
-	Jonathan Verrecchia
+    Mark Otto
+    Billy Gates
+    Jonathan Verrecchia
 
 # TECHNOLOGY COLOPHON
 

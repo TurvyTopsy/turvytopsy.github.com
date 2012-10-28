@@ -77,22 +77,20 @@
 </figure>
 <hr>
 	<h2>Feed</h2>	
-	<a href="http://feeds.feedburner.com/TurvyTopsy"><img class="rsspic" src="/static/img/feed-icon-28x28.png" alt="RSS" title="RSS 2.0 Feed"></a>
+	<a rel="alternate" type="application/rss+xml" href="http://feeds.feedburner.com/TurvyTopsy"><img class="rsspic" src="http://www.feedburner.com/fb/images/pub/feed-icon32x32.png" alt="RSS" title="RSS 2.0 Feed"></a>
 	<hr>
 	<h2>Twitter</h2>
 	<div class="twitter">
 		<ul id="twitter_update_list"><li><a class="feedload" href="https://twitter.com/turvytopsygames">Twitter feed loading...</a></li></ul>
 	</div>
 </aside>
-<script src="/static/js/twitFeed.js"></script>
-<script src="//api.twitter.com/1/statuses/user_timeline/TurvyTopsyGames.json?callback=twitterCallback2&amp;count=8"></script>
 		</div>
 		
 		<footer class="container">
 			<span class="cpr">&copy; 2012 Turvy Topsy</span>
 		</footer>
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-		<script src="//balupton.github.com/history.js/scripts/bundled/html5/jquery.history.js"></script>
-		<script src="/static/js/ajaxify.min.js"></script>
+		
+		<script src="/static/js/twitFeed.js"></script>
+		<script defer src="//api.twitter.com/1/statuses/user_timeline/TurvyTopsyGames.json?callback=twitterCallback2&amp;count=8"></script>
 	</body>
 </html>
