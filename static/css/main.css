@@ -107,7 +107,7 @@ h1 {
 }
 
 h2 {
-	color: #3350c4;
+	color: #153bd1;
 	font-size: 2em;
 	font-weight: 300;
 	text-transform: lowercase;
@@ -190,7 +190,7 @@ footer.container {
 }
 
 .navi {
-	background: #3350c4;
+	background: #153bd1;
 	min-width: 400px;
 	padding: 15px 0;
 	box-shadow: 0 0 20px #333;
