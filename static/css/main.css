@@ -389,6 +389,7 @@ article:only-child {
 }
 
 .gamenfo {
+	vertical-align: top;
 	width: 290px;
 	margin: 0 30px 40px 0;
 	color: #fff;
@@ -442,7 +443,9 @@ article:only-child {
 }
 
 .cntr {
+	display: block;
 	text-align: center;
+	margin: 0 auto;
 }
 
 .noborder {
