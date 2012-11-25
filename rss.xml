@@ -9,7 +9,23 @@
   <language>en-us</language>
   <ttl>120</ttl>
   <atom:link href="http://feeds.feedburner.com/TurvyTopsy" rel="self" type="application/rss+xml" />
-  <lastBuildDate>Mon, 15 Oct 2012 00:27:00 +0100</lastBuildDate>
+  <lastBuildDate>Sun, 25 Nov 2012 20:37:00 +0100</lastBuildDate>
+  
+  <item>
+    <title>New Logo</title>
+    <link>http://turvytopsy.com/2012/11/25/new-logo/</link>
+	<dc:creator>Lafie</dc:creator>
+    <guid isPermaLink="true">http://turvytopsy.com/2012/11/25/new-logo/</guid>
+    <pubDate>Sun, 25 Nov 2012 20:37:00 +0100</pubDate>
+    
+    <description>&lt;figure style=&quot;float:right;width:200px;&quot;&gt;
+	&lt;img src=&quot;http://i.imgur.com/AM49M.png&quot; alt=&quot;Turvy Topsy Logo&quot;&gt;
+&lt;/figure&gt;
+&lt;p&gt;This is the new logo that I designed for Turvy Topsy. It is inspired by a topsy-turvy cake. Compared to the old logo, this is simplified and far more abstract. I really quite like that it doesn't resemble any common object or symbol, and that people can interpret it any way they like. This does have the unfortunate side-effect that the logo does not have an immediately recognizable signature. It might look a little generic. I prefer people using their imagination though, and by being an abstract shape, it can be seen in many ways.&lt;/p&gt;
+&lt;p&gt;Originally, I was planning on deviating far from the old logo. The concept in my head was something involving an abstract polygonal upside-down tree with flat shading. The idea was to create it in a 3D modelling environment and then tracing it to make a vector graphic. It is important for me that the logo is a scalable vector graphic, so it can be used at any size and resolution. This complicated idea was dropped when I came up with the current logo while playing in &lt;a href=&quot;http://inkscape.org/&quot;&gt;Inkscape&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The logo can now be seen in the header of the website and as the avatar of the Turvy Topsy Twitter account. And who knows, it might show up in the intro of a future game or experiment.&lt;/p&gt;
+</description>
+  </item>
   
   <item>
     <title>So pretty...</title>
