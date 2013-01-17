@@ -53,6 +53,15 @@ Experiments will test live control, robustness with different types of motions a
 			<p>This project was preluded by a small project, experimentally assessing the quality of Kinect-generated motion data, when used to drive a physics-based character. The report of this small project (with some personal details removed) can be found <a href="https://dl.dropbox.com/u/49457270/ProjectReportAnon.pdf">here (.pdf)</a></p>
 		</article>
 		<article>
+			<h3>17-01-2013: Jacobian Pseudo Inverse Inverse Kinematics and Following a Suggestion</h3>
+<p>
+The first inverse kinematics (IK) technique implemented is the (relatively) simple jacobian pseudo inverse. The below video shows the result on the left, when the ankles and wrists are used as end-effectors for the IK implementation, and the Kinect joint angles are used as a secondary objective. The base is the pelvis joint, whose absolute position is set directly according to the Kinect data. This is not the ideal solution, as it means the character can float, if the pelvis position is sufficiently high above the ground. This effect can be observed in the video.
+</p><p>
+The pseudo inverse IK technique does not take into account the current pose, which causes severe temporal instabilities when the limbs are stretched and the Jacobian is near-singularity as a result. The video shows these anomalies in the pose. The next IK implementation, damped least squares, does take into account the current pose, which should solve some of the worst issues with the technique shown below.
+</p>
+<iframe width="853" height="480" src="http://www.youtube-nocookie.com/embed/K493sQCKOoo?rel=0" frameborder="0" allowfullscreen></iframe>
+		</article>		
+		<article>
 			<h3>21-12-2012: Comparison of joint angles and joint positions from raw Kinect data</h3>
 <p>
 The video comparison below shows some of the kinematic challenges, when using a Kinect for motion tracking. When using absolute joint positions, the character remains relatively stable and its end-effectors are stable and accurate, when being correctly tracked. However, the distance between neighbouring joints varies from pose to pose. This means that joint positions, as returned by a Kinect, are not a sufficient kinematic target for a virtual character with fixed dimensions.
