@@ -53,6 +53,17 @@ Experiments will test live control, robustness with different types of motions a
 			<p>This project was preluded by a small project, experimentally assessing the quality of Kinect-generated motion data, when used to drive a physics-based character. The report of this small project (with some personal details removed) can be found <a href="https://dl.dropbox.com/u/49457270/ProjectReportAnon.pdf">here (.pdf)</a></p>
 		</article>
 		<article>
+			<h3>21-01-2013: Damped Least Squares Inverse Kinematics with Weighted Joint Angle Secondary Objective</h3>
+<p>
+By weighting the joint angle secondary objective of the IK method (w = 0.4 in the video), a more stable result is achieved, compared to the previous results (of 17-01). However, when the Jacobian is near-singularity, pseudo inverse IK still results in instabilities in the joints. Damped least squares IK (with an appropriate damping constant: 0.3 in the video), solves these instabilities almost completely.
+</p><p>
+One issue still present is the fact that the pelvis is currently used as the base for the IK chains, but the absolute position of the pelvis can be inappropriate for the skeleton scale, resulting in a floating skeleton. So the next course of action will be to use a IK base that is more representative of the physical situation, like using support feet as a base to move the pelvis using IK.
+</p><p>
+Another issue which is likely to be causing some of the twitching movement in the below video, is the fact that the 3 DOF of the joints is separated into 3 orthogonal axes with independent rotations for the Jacobian construction in this IK implementation. The rotations are combined into a Simultaneous orthogonal rotation angle (SORA). Although this works, representing the secondary objective joint angles in the same manner introduces some limitations and instabilities.
+</p>
+<iframe width="853" height="480" src="http://www.youtube-nocookie.com/embed/o3IZtC12eRI?rel=0" frameborder="0" allowfullscreen></iframe>
+		</article>
+		<article>
 			<h3>17-01-2013: Jacobian Pseudo Inverse Inverse Kinematics and Following a Suggestion</h3>
 <p>
 The first inverse kinematics (IK) technique implemented is the (relatively) simple jacobian pseudo inverse. The below video shows the result on the left, when the ankles and wrists are used as end-effectors for the IK implementation, and the Kinect joint angles are used as a secondary objective. The base is the pelvis joint, whose absolute position is set directly according to the Kinect data. This is not the ideal solution, as it means the character can float, if the pelvis position is sufficiently high above the ground. This effect can be observed in the video.
@@ -60,7 +71,7 @@ The first inverse kinematics (IK) technique implemented is the (relatively) simp
 The pseudo inverse IK technique does not take into account the current pose, which causes severe temporal instabilities when the limbs are stretched and the Jacobian is near-singularity as a result. The video shows these anomalies in the pose. The next IK implementation, damped least squares, does take into account the current pose, which should solve some of the worst issues with the technique shown below.
 </p>
 <iframe width="853" height="480" src="http://www.youtube-nocookie.com/embed/K493sQCKOoo?rel=0" frameborder="0" allowfullscreen></iframe>
-		</article>		
+		</article>
 		<article>
 			<h3>21-12-2012: Comparison of joint angles and joint positions from raw Kinect data</h3>
 <p>
