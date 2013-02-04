@@ -53,6 +53,36 @@ Experiments will test live control, robustness with different types of motions a
 			<p>This project was preluded by a small project, experimentally assessing the quality of Kinect-generated motion data, when used to drive a physics-based character. The report of this small project (with some personal details removed) can be found <a href="https://dl.dropbox.com/u/49457270/ProjectReportAnon.pdf">here (.pdf)</a></p>
 		</article>
 		<article>
+			<h3>04-02-2013: Support Base Inverse Kinematics Configuration</h3>
+<p>
+The end effector configuration for the damped least squared IK has been changed, and can be seen in the image below. The colored lines denote joint chains, with the squares denoting end-effectors being tracked, and the circles denoting the base joint(s) of each joint chain.
+<a href="http://i.imgur.com/qc8f2Aw.png" style="float:right;"><img src="http://i.imgur.com/qc8f2Aw.png" style="width:323px;height:485px;" alt="Inverse kinematics end-effector configuration" title="Inverse kinematics end-effector configuration"></a>
+When one foot is lifted off the ground, the support base moves from an average of both ankle positions, to the ankle position of the foot still on the ground. The joint chain of the lifted ankle shortens to a base at the pelvis joint and the joint chain of the pelvis only has one base at the other ankle.
+</p>
+<p>
+The video below shows this IK approach on the far left skeleton, with the support footing shown as pink ankle joints on the far right skeleton. Several issues resulting from using the support footing as the base for the entire skeleton can be observed:
+<ul>
+<li>When the support base changes, from two to one foot and to a lesser degree vice versa, the pelvis joint jerks significantly, resulting in the entire skeleton jerking and having to recover to a stable pose.</li>
+<li>The angles of the legs frequently don't follow the Kinect data, instead showing odd knee positioning and occasionally snapping to the desired pose, causing the body to jerk. This may be caused by having up to three joint chains affecting each of the joints in the legs (the pelvis and both of the ankles).</li>
+<li>In general, the skeleton's position and pose are less stable than the previous IK approach.</li>
+</ul>
+Experiments were performed with using the actual Jacobian nullspace for the joint angle secondary objective. But with this end-effector configuration, the nullspace was too restrictive to be able to follow the joint angles faithfully, especially in the legs. So for the video below, the pseudo-nullspace (I - jacobian^-1 * jacobian) was used instead. This means the position of the end-effectors can be (slightly) affected by the secondary objective.
+</p>
+<p>
+Several adventages of this approach over the previous IK approach (with a pelvis base) can also be seen in the video:
+<ul>
+<li>The feet are always on the ground when they are in the Kinect data.</li>
+<li>The position of the feet is much more stable relative to the ground, using this IK approach.</li>
+<li>The hip bones actually rotate to fit the end-effectors to their absolute positions, which does not seem to happen in the Kinect joint angle data.</li>
+<li>The joint angle rotations this IK approach calculates, actually move the body relative to the world through its support base, which is similar to the way a person uses ground reaction forces to position his/her body.</li>
+</ul>
+</p>
+<p>
+The next steps are to determine if any of the issues with this approach can be mitigated, and trying the approach with a physically simulated character.
+</p>
+<iframe width="853" height="480" src="http://www.youtube-nocookie.com/embed/AbD_WJdKPug?rel=0" frameborder="0" allowfullscreen></iframe>
+		</article>		
+		<article>
 			<h3>21-01-2013: Damped Least Squares Inverse Kinematics with Weighted Joint Angle Secondary Objective</h3>
 <p>
 By weighting the joint angle secondary objective of the IK method (w = 0.4 in the video), a more stable result is achieved, compared to the previous results (of 17-01). However, when the Jacobian is near-singularity, pseudo inverse IK still results in instabilities in the joints. Damped least squares IK (with an appropriate damping constant: 0.3 in the video), solves these instabilities almost completely.
