@@ -53,6 +53,34 @@ Experiments will test live control, robustness with different types of motions a
 			<p>This project was preluded by a small project, experimentally assessing the quality of Kinect-generated motion data, when used to drive a physics-based character. The report of this small project (with some personal details removed) can be found <a href="https://dl.dropbox.com/u/49457270/ProjectReportAnon.pdf">here (.pdf)</a></p>
 		</article>
 		<article>
+			<h3>09-02-2013: Keeping it Simple</h3>
+<p>
+As the video below demonstrates, simplifying an approach can benefit it noticeably. Compared to the IK approach of the previous log post, the approach used with the far left character is far simpler. The IK implementation still uses damped least squares IK with the Kinect SDK generated joint angles as secondary objective. However, the pelvis is no longer an end-effector, which means the remaining end-effectors are the ankles, the wrists and the base of the neck. 
+</p>
+<p>
+All joint chains use the pelvis as a base, but the position of the pelvis is not tracked directly. Instead, before and after the IK posing, the skeleton is positioned according to its support base. This means the position of the pelvis is not guaranteed to follow the Kinect data, but the secondary objectives of the IK approach (the joint angles) seem to do a very good job at keeping the pelvis position reasonable.
+</p>
+<p>
+This much simpler approach solves most of the issues of the previous approach:
+<ul>
+<li>When the support base changes, the pelvis remains stable. Only if there is a large difference between the Kinect data of the support base and the actual support base, does a jump of the skeleton appear. This can be solved by positioning according to the actual support base, instead of the Kinect data.</li>
+<li>The angles of the legs generally follow the secondary objectives, because each joint in the legs is only involved in one joint chain, simplifying the IK configuration of the legs significantly.</li>
+<li>The skeleton pose is relatively stable, and little swaying can be observed. The feet are also stable on the ground, with little to no visible sliding.</li> 
+</ul>
+</p>
+<p>
+Although the results of the current approach are solid, some drawbacks can still be observed:
+<ul>
+<li>The position of the pelvis is not tracked directly in this IK approach, which results in the pelvis position being influenced slightly by movement of the legs, and generally not following the Kinect data perfectly faithfully. The resulting poses are visually plausible however, and the position of the pelvis (and the entire skeleton as a result) never differs drastically from the Kinect data.</li>
+<li>When both feet are on the ground, the position of the support base is the average of both ankles. This leaves some freedom for the invidivual ankles to differ from the Kinect data, as only the average of both is tracked. This means that one foot can drop through the floor slightly. This is solvable by defining the support base better.</li>
+</ul>
+</p>
+<p>
+Overall, this approach is simpler, more robust, and with minor adjustments looks to form a good basis when tracking a physics simulated character.
+</p>
+<iframe width="853" height="480" src="http://www.youtube-nocookie.com/embed/OCu8UYuNTAM?rel=0" frameborder="0" allowfullscreen></iframe>
+		</article>
+		<article>
 			<h3>04-02-2013: Support Base Inverse Kinematics Configuration</h3>
 <p>
 The end effector configuration for the damped least squared IK has been changed, and can be seen in the image below. The colored lines denote joint chains, with the squares denoting end-effectors being tracked, and the circles denoting the base joint(s) of each joint chain.
