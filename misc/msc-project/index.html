@@ -53,6 +53,27 @@ Experiments will test live control, robustness with different types of motions a
 			<p>This project was preluded by a small project, experimentally assessing the quality of Kinect-generated motion data, when used to drive a physics-based character. The report of this small project (with some personal details removed) can be found <a href="https://dl.dropbox.com/u/49457270/ProjectReportAnon.pdf">here (.pdf)</a></p>
 		</article>
 		<article>
+			<h3>17-05-2013: Goal driven IK and first 'balanced' physics character</h3>
+<p>
+The below video shows the initial (im)balanced motions, performed by the physically plausible character. Various changes to the implementation were made to accomplish this:
+</p>
+<ul>
+<li>The IK method uses the previous goal pose as input to calculate the difference to the new goal pose, as returned by the Kinect. The previous approach used the current physics character pose as input, which resulted in the character collapsing and being unable to maintain the goal poses.</li>
+<li>The physics character uses proportions similar to the Kinect data, so the absolute positions of end-effectors can be tracked as-is. The skeletal configuration of the physics character differs from the Kinect character, as some Kinect bones could be described by a single physics body volume.</li>
+<li>The IK method uses the skeletal configuration of the physics character, and maps the Kinect data (shown in left two characters) to it by mapping equivalent parent-to-child bone relations.</li>
+<li>The entire solution consistently describes bone orientations relative to the parent bone's coordinate system.</li>
+<li>Simplified PD-controllers (without velocity tracking) track the goal pose (shown as right-most character) and customizable gains are manually set to allow the physics character to track the goal pose faithfully, using internal joint torques. The gains are roughly set to avoid extreme joint torques, which would result in twitching/oscillating motions. Implementing full PD-controllers and further tweaking of the gains is going to be required for more precise tracking control.</li>
+<li>A larger than realistic ground-contact area of the feet was required to achieve the balanced physics character during an idle pose.</li>
+</ul>
+<p>
+The video shows that the physics character can remain standing during idle motions, after a short initialization period where the character is positioned while floating slightly above the ground. The character does exhibit swaying of the arms and entire body, giving the impression of instability. When anything more challenging than idle motions are performed, the swaying worsens and the character easily loses balance.
+</p>
+<p>
+Besides improving the implementation of the PD-controllers, another possible improvement to the model can be found in explicitly controlling the ankle orientation to move the center of mass (COM) above the ground support. Currently, the ankle orientation is set so the feet are always parallel to the ground in the goal pose. Assuming the feet are flat on the ground, the ankle orientation can be adjusted so the vector from the center of the ground support to the COM points straight up, thus making sure the COM is not off to one side of the ground support, which risks the physics character falling to that side. This balance strategy is far simpler than other approaches, like virtual forces, which means it can be tested more easily than more elaborate balance strategies. By only controlling the ankle joints however, the utility of this approach could also be limited.
+</p>
+<iframe width="853" height="480" src="http://www.youtube-nocookie.com/embed/q_LbHJNUOcc?rel=0" frameborder="0" allowfullscreen></iframe>
+		</article>
+		<article>
 			<h3>09-02-2013: Keeping it Simple</h3>
 <p>
 As the video below demonstrates, simplifying an approach can benefit it noticeably. Compared to the IK approach of the previous log post, the approach used with the far left character is far simpler. The IK implementation still uses damped least squares IK with the Kinect SDK generated joint angles as secondary objective. However, the pelvis is no longer an end-effector, which means the remaining end-effectors are the ankles, the wrists and the base of the neck. 
