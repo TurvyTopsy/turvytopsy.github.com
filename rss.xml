@@ -14,7 +14,7 @@
   <item>
     <title>New Logo</title>
     <link>http://turvytopsy.com/2012/11/25/new-logo/</link>
-	<dc:creator>Lafie</dc:creator>
+	<dc:creator>Oz</dc:creator>
     <guid isPermaLink="true">http://turvytopsy.com/2012/11/25/new-logo/</guid>
     <pubDate>Sun, 25 Nov 2012 19:37 +0100</pubDate>
     
@@ -30,7 +30,7 @@
   <item>
     <title>So pretty...</title>
     <link>http://turvytopsy.com/2012/10/15/so-pretty/</link>
-	<dc:creator>Lafie</dc:creator>
+	<dc:creator>Oz</dc:creator>
     <guid isPermaLink="true">http://turvytopsy.com/2012/10/15/so-pretty/</guid>
     <pubDate>Mon, 15 Oct 2012 00:27 +0100</pubDate>
     
@@ -42,12 +42,12 @@
   <item>
     <title>Revised Site Design and New Hosting</title>
     <link>http://turvytopsy.com/2012/02/18/new-site-design/</link>
-	<dc:creator>Lafie</dc:creator>
+	<dc:creator>Oz</dc:creator>
     <guid isPermaLink="true">http://turvytopsy.com/2012/02/18/new-site-design/</guid>
     <pubDate>Sat, 18 Feb 2012 01:17 +0100</pubDate>
     
     <description>&lt;figure style=&quot;float:right;width:200px;&quot;&gt;
-	&lt;img src=&quot;http://pages.github.com/images/logo-pages.png&quot; alt=&quot;GitHub Pages&quot;&gt;
+	&lt;img src=&quot;http://pages.github.com/images/logo-pages-1x.png&quot; alt=&quot;GitHub Pages&quot;&gt;
 	&lt;figcaption&gt;GitHub Pages is great for anyone looking to host static pages for open-source projects or small organizations.&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;p&gt;Although I promised to leave the design of this website alone, some slight style tweaks slipped into the transition to &lt;a href=&quot;http://pages.github.com&quot;&gt;GitHub Pages&lt;/a&gt;. This site used to be hosted on Google App Engine, but since it only requires static pages, GitHub Pages seemed a better fit. So here's to a fresh start on a new service, and I promise to focus on content from now on... really... I mean it... seriously, no more new designs of an empty website.&lt;/p&gt;</description>

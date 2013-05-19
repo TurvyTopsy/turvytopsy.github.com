@@ -3,7 +3,7 @@
 
 # TEAM
 
-    Owner: Lafie
+    Owner: Oz
     Site: http://turvytopsy.com
     Twitter: @TurvyTopsyGames
 
@@ -16,5 +16,5 @@
 # TECHNOLOGY COLOPHON
 
     HTML5, CSS3
-    jQuery, Modernizr
+    html5shiv
 	Jekyll
