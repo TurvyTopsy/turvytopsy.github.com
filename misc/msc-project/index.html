@@ -53,6 +53,23 @@ Experiments will test live control, robustness with different types of motions a
 			<p>This project was preluded by a small project, experimentally assessing the quality of Kinect-generated motion data, when used to drive a physics-based character. The report of this small project (with some personal details removed) can be found <a href="https://dl.dropbox.com/u/49457270/ProjectReportAnon.pdf">here (.pdf)</a></p>
 		</article>
 		<article>
+			<h3>24-05-2013: Orienting Ankles as Balance Strategy</h3>
+<p>
+<a href="http://i.imgur.com/felqxtt.png" style="float:right;"><img src="http://i.imgur.com/felqxtt.png" style="width:285px;height:485px;" alt="Ground Support to COM" title="Ground Support to COM"></a>
+While the previous dynamic character could stay standing up, it only worked when the movement was calm and when the feet were made abnormally large. Therefore, the simple active balance strategy discussed in the previous post is implemented.
+</p>
+<p>
+The orientation of the ankles is controlled, by pointing them in the direction of the character's center of mass (COM). The image to the right shows that direction, as a line from the character's ground support base to the character's COM. If both feet are on the ground, the ground support base is the average of the positions of both feet, weighted by their ground reaction force. The COM position is adjusted by the COM velocity, where the velocity component perpendicular to the COM vector affects the position of the COM, thus adjusting the ankle orientations to anticipate the velocity of the character.
+</p>
+<p>
+The video below shows the result of the balance strategy. The same motions as the video of the last log are performed. With the balance strategy the character is capable of standing up significantly longer than the previous approach, without requiring a large ground contact area of the feet. The feet can be properly proportioned with the rest of the body. Small adjustments to the orientation of the ankles can be seen on the goal pose on the far right.
+</p>
+<p>
+Occasionally, the torques exerted by the ankles to remain balanced result in some jittering motion of the lower legs and feet. However, minimal to no foot sliding has been observed during the experiments. By controlling the orientation of the ankles explicitly, that data from the Kinect is unused. This means that motions that rely on a particular orientation of the ankles, notably leaning, are not tracked accurately by the dynamic character. The most notable shortcoming of this, is that taking a step currently unbalances the character, because the weight shifting required to perform the step is not reproduced by the dynamic character.
+</p>
+<iframe width="853" height="480" src="http://www.youtube-nocookie.com/embed/1UAhYtu_M70?rel=0" frameborder="0" allowfullscreen></iframe>
+		</article>
+		<article>
 			<h3>17-05-2013: Goal driven IK and first 'balanced' physics character</h3>
 <p>
 The below video shows the initial (im)balanced motions, performed by the physically plausible character. Various changes to the implementation were made to accomplish this:
