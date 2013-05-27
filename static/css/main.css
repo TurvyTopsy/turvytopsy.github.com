@@ -382,6 +382,11 @@ article:only-child {
 	text-decoration: none;
 }
 
+.cleanlist {
+	list-style: none;
+	padding: 0;
+}
+
 .artinf {
 	font-weight: 300;
 	color: #555;
