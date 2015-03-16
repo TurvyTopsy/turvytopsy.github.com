@@ -1,0 +1,28 @@
+url: http://turvytopsy.com
+permalink: /blog/:year-:month-:day-:title/
+timezone: Europe/Amsterdam
+paginate_path: /page:num/
+paginate: 8
+excerpt_separator: <!--more-->
+gems:
+- jemoji
+- jekyll-redirect-from
+- jekyll-sitemap
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "article"
+      og: "article"
+      author: "Lafie"
+  -
+    scope:
+      path: ""
+      type: "drafts"
+    values:
+      layout: "article"
+      og: "article"
+      author: "Lafie"
+exclude: [/Gemfile,/Gemfile.lock]

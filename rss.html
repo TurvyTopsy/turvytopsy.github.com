@@ -1,0 +1,34 @@
+---
+permalink: /rss.xml
+sitemap: false
+---
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<channel>
+  <title>Turvy Topsy</title>
+  <link>{{ site.url }}/</link>
+  <description>Turvy Topsy Blog about web and game development</description>
+  <image>
+    <url>{{ site.url }}/tile.png</url>
+    <title>Turvy Topsy</title>
+    <link>{{ site.url }}/</link>
+  </image>
+  <category>Game development</category>
+  <language>en-us</language>
+  <copyright>Copyright 2015, Turvy Topsy Software</copyright>
+  <ttl>120</ttl>
+  <atom:link href="http://feeds.feedburner.com/TurvyTopsy" rel="self" type="application/rss+xml" />
+  <lastBuildDate>{{ site:time | date_to_rfc822 }}</lastBuildDate>
+  {% for article in site.posts limit:15 %}<item>
+    <title>{{ article.title }}</title>
+    <link>{{ site.url }}{{ article.url }}</link>
+	<dc:creator>{{ article.author }}</dc:creator>
+    <guid isPermaLink="true">{{ site.url }}{{ article.url }}</guid>
+    <pubDate>{{ article.date | date_to_rfc822 }}</pubDate>
+    {% for tag in article.tags %}<category>{{ tag }}</category>
+    {% endfor %}{% capture fullhref %}href="{{ site.url }}{{ article.url }}#{% endcapture %}{% capture fullurl %}href="{{ site.url }}/{% endcapture %}{% capture articlecontent %}{{ article.excerpt }}
+    {% if article.excerpt < article.content %}<a href="{{ site.url }}{{ article.url }}" class="more" title="Read More">Read More</a>{% endif %}{% endcapture %}<description>
+    {{ articlecontent | replace:'href="/',fullurl | replace:'href="#',fullhref | xml_escape }}</description>
+  </item>{% endfor %}
+</channel>
+</rss>

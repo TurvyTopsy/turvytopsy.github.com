@@ -1,0 +1,23 @@
+---
+layout: theme
+---
+<article class="clearfix" typeof="schema:BlogPosting">
+    <header class="article-header">
+        <h1 class="article-title" property="schema:headline">{{ page.title }}</h1><div class="article-meta">By <address class="article-author" property="schema:author" typeof="schema:Person"><span property="schema:additionalName">{{ page.author }}</span></address> on <time datetime="{{ page.date | date_to_xmlschema }}" property="schema:datePublished">{{ page.date | date: '%B %-d, %Y' }}</time>, <a href="{{ site.url }}{{ page.url }}" rel="bookmark" property="schema:url">Permalink</a>. Tags: <span property="schema:keywords">
+        {% for tag in page.tags %}<a>{{ tag }}</a>{% unless forloop.last %},{% endunless %}{% endfor %}
+        </span> </div>
+    </header>
+    <div class="article-content" property="schema:articleBody">
+{{ content }}
+    </div>
+</article>
+{% if page.previous or page.next %}<nav class="page-nav"><ul class="pagenav-list">
+    {% if page.previous %}<li><a href="{{ page.previous.url }}" title="Previous Post: {{ page.previous.title }}">
+        <span class="arrow-square"><span class="arrow-tri-l"></span><span class="arrow-line"></span></span>
+        <span class="pagenav-text">Previous</span>
+    </a></li>{% endif %}{% if page.next %}<li><a href="{{ page.next.url }}" title="Next Post: {{ page.next.title }}">
+        <span class="flrt"><span class="pagenav-text">Next</span>
+        <span class="arrow-square"><span class="arrow-line"></span><span class="arrow-tri-r"></span></span>
+        </span>
+    </a></li>{% endif %}
+</ul></nav>{% endif %}

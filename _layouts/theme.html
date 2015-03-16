@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+    <head{% if page.og == 'article' %} prefix="article: http://ogp.me/ns/article#"{% endif %}>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{% if paginator.page == 1 %}Blog Front Page{% elsif paginator.page > 1 %}Blog Page {{ paginator.page }}{% else %}{{ page.title }}{% endif %} - Turvy Topsy</title>
+        <meta name="keywords" content="{{ page.tags | join:',' }}">
+        <meta name="description" content="{{ page.description }}">
+        <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'/index.html','/' }}">
+        <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ site.url }}/sitemap.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://feeds.feedburner.com/TurvyTopsy">
+        {% if paginator.total_pages > 1 %}<link rel="first" href="{{ site.url }}/">
+        <link rel="last" href="{{ site.url }}/page{{ paginator.total_pages }}/">
+        {% if paginator.next_page %}<link rel="next" href="{{ site.url }}{{ paginator.next_page_path }}">{% endif %}
+        {% if paginator.previous_page %}<link rel="prev" href="{{ site.url }}{% if paginator.previous_page == 1 %}/{% else %}{{ paginator.previous_page_path }}{% endif %}">{% endif %}{% endif %}
+
+        <meta property="twitter:card" content="summary">
+        <meta property="twitter:site" content="@TurvyTopsyGames">
+        <meta property="og:title" content="{% if page.title == 'Blog' %}{% if paginator.page == 1 %}Blog Front Page{% else %}Blog Page {{ paginator.page }}{% endif %}{% else %}{{ page.title }}{% endif %}">
+        <meta property="og:type" content="{% if page.og %}{{ page.og }}{% else %}website{% endif %}">
+        <meta property="og:image" content="{% if page.og-img %}{{ page.og-img | replace:'!siteurl!',site.url }}{% else %}{{ site.url }}/tile.png{% endif %}">
+        <meta property="og:url" content="{{ site.url }}{{ page.url | replace:'/index.html','/' }}">
+        <meta property="og:description" content="{{ page.description }}">
+        <meta property="og:site_name" content="Turvy Topsy">
+        {% if page.og == 'article' %}<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+        <meta property="article:author" content="{{ page.author }}">
+        {% for tag in page.tags %}<meta property="article:tag" content="{{ tag }}">
+        {% endfor %}{% endif %}
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+        <link href='//fonts.googleapis.com/css?family=Bevan%7CCarter+One' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css">
+        <link rel="stylesheet" href="/css/main.min.css">
+        <!--[if lt IE 9]>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv-printshiv.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <!--[if lt IE 9]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <header class="page-header">
+            <div class="header-bg">
+                <div class="centered-header">
+                    <h1 class="tt-logo" typeof="schema:Organization">
+                        <a class="logo-link" href="{{ site.url }}/" property="schema:url">
+                            <img class="logo" src="/img/ttlogo120h.png" alt="" property="schema:logo"><span class="logo-name" property="schema:name">Turvy Topsy</span><meta property="schema:legalName" content="Turvy Topsy Software">
+                        </a>
+                    </h1><nav class="primary-nav">
+                        <ul class="primnav-list">
+                            <li><a href="/">Blog</a></li><li><a>Games</a></li><li><a href="https://twitter.com/TurvyTopsyGames" rel="external">Twitter</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main role="main">
+{{ content }}
+        </main>
+        <footer class="page-footer clearfix">
+            <div class="rf">
+                <small>&copy; <time datetime="2015">2015</time> <span>Turvy Topsy Software</span></small>
+                <ul class="footer-links">
+                    <li><a href="http://feeds.feedburner.com/TurvyTopsy">RSS</a></li><li><a href="/about/">About</a></li>
+                </ul>  
+            </div>
+        </footer>
+    </body>
+</html>

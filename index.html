@@ -1,125 +1,28 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>	  <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>		 <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>		 <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		
-		<title>News - Turvy Topsy</title>
-		<meta name="description" content="Turvy Topsy Video Game Development">
-		<meta name="keywords" content="game, videogame, indie, turvy, topsy, one-man, gaming, development">
-		<meta name="author" content="Oz">	
-		<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://feeds.feedburner.com/TurvyTopsy">
-		
-		<meta name="viewport" content="width=device-width">
-
-		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600">
-		<link rel="stylesheet" href="/static/css/normalize.min.css">
-		<link rel="stylesheet" href="/static/css/main.css">
-
-		<!--[if lt IE 9]>
-			<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
-	</head>
-	<body>
-		<!--[if lt IE 7]>
-			<p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
-		<![endif]-->
-		<header class="navi">
-			<div class="container">
-				<div class="lftlgn">
-				<h1><a class="title" href="http://turvytopsy.com/"><sup class="ttsup">Turvy</sup><img class="logo" src="http://i.imgur.com/6V0m8.png" alt="Logo">Topsy</a></h1>
-				</div><div class="rghtlgn">
-				<nav>
-					<ul class="nav">
-						<li class="navli active"><a href="/">News</a>
-						<li class="navli"><a href="/games/">Games</a>
-						<li class="navli"><a href="/contact/">Contact</a>
-					</ul>
-				</nav>
-				</div>
-			</div>
-		</header>
-		
-		<div class="main container">
-			<div class="focus leftw">
-	<h2>News</h2>
-	<div class="articles">
-		
-<article>
-	<header>
-	<h3><a href="/2012/11/25/new-logo/">New Logo</a></h3>
-	<div class="artinf">by <address>Oz</address> on <time datetime="2012-11-25">2012-11-25</time></div>
-	</header>
-	<div class="clearfix">
-		
-		<figure style="float:right;width:200px;">
-	<img src="http://i.imgur.com/AM49M.png" alt="Turvy Topsy Logo">
-</figure>
-<p>This is the new logo that I designed for Turvy Topsy. It is inspired by a topsy-turvy cake. Compared to the old logo, this is simplified and far more abstract. I really quite like that it doesn't resemble any common object or symbol, and that people can interpret it any way they like. This does have the unfortunate side-effect that the logo does not have an immediately recognizable signature. It might look a little generic. I prefer people using their imagination though, and by being an abstract shape, it can be seen in many ways.</p>
-<p>Originally, I was planning on deviating far from the old logo. The concept in my head was something involving an abstract polygonal upside-down tree with flat shading. The idea was to create it in a 3D modelling environment and then tracing it to make a vector graphic. It is important for me that the logo is a scalable vector graphic, so it can be used at any size and resolution. This complicated idea was dropped when I came up with the current logo while playing in <a href="http://inkscape.org/">Inkscape</a>.</p>
-<p>The logo can now be seen in the header of the website and as the avatar of the Turvy Topsy Twitter account. And who knows, it might show up in the intro of a future game or experiment.</p>
-
-		
-	</div>
-</article>
-
-<article>
-	<header>
-	<h3><a href="/2012/10/15/so-pretty/">So pretty...</a></h3>
-	<div class="artinf">by <address>Oz</address> on <time datetime="2012-10-15">2012-10-15</time></div>
-	</header>
-	<div class="clearfix">
-		
-		<p>I've now recognized that this website is just a playing ground for me, so I'm going to treat it as such. This means the entire site gets a 'beta' tag, and anything can change at anytime. This includes the content, the design, or whatever else I decide to play around with. I'm quite happy with the design right now though, so it's not unlikely that it will remain for some time. I still don't have a logo though, which is also a fun project, so expect that next.</p>
-<p>The site is still hosted on GitHub Pages, which works great for someone not afraid to write articles in raw html. I did run into a problem with GitHub Pages' version of Jekyll and Liquid. Since the Liquid version on GitHub is several versions behind, it doesn't yet support the <em>split</em> command, which I use to split articles when they are too long to fit on the front page. So unfortunately, I'm forced to generate the site using a local installation of Jekyll, and git push the generated site, instead of letting GitHub generate the site for me. A minor inconvenience, although I can now check the site locally, and it will look exactly the same when synced. That is a nice unforeseen advantage, really.</p>
-<p>P.S. I've discovered spell-checking in Notepad++, which is great when writing articles in html, you get the syntax highlighting, as well as the spell-checker. The best of both worlds!</p>
-		
-	</div>
-</article>
-
-<article>
-	<header>
-	<h3><a href="/2012/02/18/new-site-design/">Revised Site Design and New Hosting</a></h3>
-	<div class="artinf">by <address>Oz</address> on <time datetime="2012-02-18">2012-02-18</time></div>
-	</header>
-	<div class="clearfix">
-		
-		<figure style="float:right;width:200px;">
-	<img src="http://pages.github.com/images/logo-pages-1x.png" alt="GitHub Pages">
-	<figcaption>GitHub Pages is great for anyone looking to host static pages for open-source projects or small organizations.</figcaption>
-</figure>
-<p>Although I promised to leave the design of this website alone, some slight style tweaks slipped into the transition to <a href="http://pages.github.com">GitHub Pages</a>. This site used to be hosted on Google App Engine, but since it only requires static pages, GitHub Pages seemed a better fit. So here's to a fresh start on a new service, and I promise to focus on content from now on... really... I mean it... seriously, no more new designs of an empty website.</p>
-		
-	</div>
-</article>
-
-	</div>
-</div><aside class="media">
-	<h2>Spotlight</h2>
-<figure class="sptlght">
-<a href="http://imgur.com/a/pqvED">
-	<img src="http://i.imgur.com/ypGLHl.png" alt="MambaJS Screenshot" title="MambaJS Level 5">
-</a>
-</figure>
-<hr>
-	<h2>Feed</h2>	
-	<a rel="alternate" type="application/rss+xml" href="http://feeds.feedburner.com/TurvyTopsy"><img class="rsspic" src="http://www.feedburner.com/fb/images/pub/feed-icon32x32.png" alt="RSS" title="RSS 2.0 Feed"></a>
-	<hr>
-	<h2>Twitter</h2>
-	<div class="twitter">
-		<ul id="twitter_update_list"><li><a class="feedload" href="https://twitter.com/turvytopsygames">Twitter feed loading...</a></li></ul>
-	</div>
-</aside>
-		</div>
-		
-		<footer class="container">
-			<span class="cpr">&copy; 2013 Turvy Topsy Software</span>
-		</footer>
-		
-		<script src="/static/js/twitFeed.js"></script>
-		<script defer src="//api.twitter.com/1/statuses/user_timeline/TurvyTopsyGames.json?callback=twitterCallback2&amp;count=8"></script>
-	</body>
-</html>
+---
+layout: theme
+title: Blog
+description: Turvy Topsy Blog about web and game development
+tags: [Blog, Game Development, Web Development]
+---
+{% for article in paginator.posts %}
+<article class="clearfix" typeof="schema:BlogPosting">
+    <header class="article-header">
+        <h1 class="article-title" property="schema:headline"><a href="{{ article.url }}">{{ article.title }}</a></h1><div class="article-meta">By <address class="article-author" property="schema:author" typeof="schema:Person"><span property="schema:additionalName">{{ article.author }}</span></address> on <time datetime="{{ article.date | date_to_xmlschema }}" property="schema:datePublished">{{ article.date | date: '%B %-d, %Y' }}</time>, <a href="{{ site.url }}{{ article.url }}" rel="bookmark" property="schema:url">Permalink</a>. Tags: <span property="schema:keywords">
+        {% for tag in article.tags %}<a>{{ tag }}</a>{% unless forloop.last %},{% endunless %}{% endfor %}
+        </span></div>
+    </header>
+    <div class="article-content" property="schema:articleBody">
+{{ article.excerpt }}
+{% if article.excerpt < article.content %}<div class="more-block clearfix"><a href="{{ article.url }}" class="more" title="Read More"><span class="arrow-line">Read More</span><span class="arrow-tri-r"></span></a></div>{% endif %}
+    </div>
+</article>{% endfor %}{% if paginator.next_page or paginator.previous_page %}
+<nav class="page-nav"><ul class="pagenav-list">
+    {% if paginator.next_page %}<li><a href="{{ paginator.next_page_path }}" rel="next" title="Older Posts">
+        <span class="arrow-square"><span class="arrow-tri-l"></span><span class="arrow-line"></span></span>
+        <span class="pagenav-text">Older</span>
+    </a></li>{% endif %}{% if paginator.previous_page %}<li><a href="{% if paginator.previous_page == 1 %}/{% else %}{{ paginator.previous_page_path }}{% endif %}" rel="prev" title="Newer Posts">
+        <span class="flrt"><span class="pagenav-text">Newer</span>
+        <span class="arrow-square"><span class="arrow-line"></span><span class="arrow-tri-r"></span></span>
+        </span>
+    </a></li>{% endif %}
+</ul></nav>{% endif %}

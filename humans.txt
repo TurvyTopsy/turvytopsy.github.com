@@ -3,18 +3,18 @@
 
 # TEAM
 
-    Owner: Oz
+    Lafie
     Site: http://turvytopsy.com
     Twitter: @TurvyTopsyGames
 
 # THANKS
 
-    Mark Otto
-    Billy Gates
-    Jonathan Verrecchia
+    The people behind:
+	HTML5 Boilerplate
+	Jekyll
+	Mozilla Developer Network
 
 # TECHNOLOGY COLOPHON
 
-    HTML5, CSS3
-    html5shiv
-	Jekyll
+    CSS3, HTML5, ARIA, RSS 2.0
+    Normalize.css, html5shiv.js, Google Fonts, schema.org
