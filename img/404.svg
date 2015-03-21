@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" version="1.1">
+<defs><filter id="blur"><feGaussianBlur stdDeviation="13"/></filter></defs>
+<circle cx="160" cy="160" r="134" fill="#000" filter="url(#blur)"/>
+<circle cx="100" cy="130" r="13" fill="#fff"/>
+<circle cx="120" cy="130" r="13" fill="#fff"/>
+<circle cx="100" cy="130" r="5" fill="#000"/>
+<circle cx="120" cy="130" r="5" fill="#000"/>
+<circle cx="170" cy="200" r="8" fill="#fff"/>
+<circle cx="183" cy="200" r="8" fill="#fff"/>
+<circle cx="167" cy="197" r="4" fill="#000"/>
+<circle cx="180" cy="197" r="4" fill="#000"/>
+<circle cx="175" cy="100" r="13" fill="#fff"/>
+<circle cx="195" cy="100" r="13" fill="#fff"/>
+<circle cx="174" cy="108" r="5" fill="#000"/>
+<circle cx="194" cy="108" r="5" fill="#000"/>
+</svg>
