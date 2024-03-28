@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<channel>
+  <title>Turvy Topsy</title>
+  <link>https://turvytopsy.com/</link>
+  <description>Turvy Topsy</description>
+  <image>
+    <url>https://turvytopsy.com/tile.png</url>
+    <title>Turvy Topsy</title>
+    <link>https://turvytopsy.com/</link>
+  </image>
+  <category>Blog</category>
+  <language>en-us</language>
+  <copyright>Copyright, Turvy Topsy</copyright>
+  <ttl>120</ttl>
+  <atom:link href="https://feeds.feedburner.com/TurvyTopsy" rel="self" type="application/rss+xml" />
+  <lastBuildDate>Thu, 28 Mar 2024 13:19:50 +0100</lastBuildDate>
+</channel>
+</rss>

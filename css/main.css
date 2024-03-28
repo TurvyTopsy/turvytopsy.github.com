@@ -1,0 +1,937 @@
+/*! HTML5 Boilerplate v5.0.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0;
+    background: #f06;
+    color: #000;
+    padding: 0.5em 0.937em;
+}
+
+.browserupgrade a {
+	background: #fff;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* Globals */
+
+html {
+	background: #e1eaef;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+	background: #e1eaef;
+	padding: 0.062em 0.437em;
+	border-radius: 0.625em;
+}
+
+a:hover {
+	box-shadow: 0 0.062em 0.125em #666;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	line-height: 1.1em;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+	background: transparent;
+	padding: 0;
+	border-radius: 0;
+}
+
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+	box-shadow: none;
+}
+
+img {
+	max-height: 25em;
+	max-width: 100%;
+}
+
+figcaption {
+	font-size: 0.8em;
+	margin: 0.312em 0.312em 0;
+}
+
+blockquote {
+	font-weight: bold;
+	padding: 0.937em;
+	margin: 0;
+	overflow: hidden;
+}
+
+blockquote:before {
+	content: "“";
+	color: #e1eaef;
+	font-weight: bold;
+	float: left;
+	font-size: 6em;
+	height: 0.2em;
+	line-height: 0.5em;
+	margin-left: -0.05em;
+}
+
+blockquote:after {
+	content: "”";
+	color: #e1eaef;
+	font-weight: bold;
+	float: right;
+	font-size: 6em;
+	height: 0.2em;
+	line-height: 0.8em;
+	margin-right: -0.05em;
+}
+
+iframe {
+	border: 0;
+}
+
+/* Page header */
+
+.page-header {
+	min-width: 20em;
+	margin-bottom: -12px;
+}
+
+.header-bg {
+	background: #161d2e;
+	color: white;
+}
+
+.centered-header {
+	max-width: 57.812em;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.tt-logo {
+	display: inline-block;
+	width: 4.5em;
+	margin: 0.312em -4.812em 0.312em 0.312em;
+	vertical-align: middle;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo-link {
+	color: white;
+	display: block;
+}
+
+.logo {
+	display: inline-block;
+	width: 1.75em;
+	height: 2.5em;
+}
+
+.logo-name {
+	display: inline-block;
+	line-height: 1em;
+	vertical-align: middle;
+	margin-left: -0.187em;
+	width: 2.937em;
+}
+
+.primary-nav {
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 10.25em;
+}
+
+.primnav-list {
+	padding: 0;
+	margin: 0;
+}
+
+.primnav-list li {
+	display: inline-block;
+	list-style: none;
+}
+
+.primnav-list a {
+	display: block;
+	background: transparent;
+	border-radius: 0;
+	color: #6c7a98;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.25em;
+	padding: 0.5em 1em;
+}
+
+.primnav-list a:hover {
+	color: white;
+	box-shadow: none;
+}
+
+.page-header:after {
+	content: " ";
+	display: block;
+	position: relative;
+	margin-top: 1px;
+	height: 2px;
+	background: #161d2e;
+	background-clip: content-box;
+	padding: 2px 0 3px;
+	border-top: 3px solid #161d2e;
+	border-bottom: 1px solid #161d2e;
+}
+
+/* 404 page and About page */
+
+.t404 {
+    display: block;
+    width: 20em;
+    height: 23.125em;
+    margin: 0.937em auto;
+}
+
+.cntrd {
+    text-align: center;
+    margin: 0.937em;
+}
+
+.cmpnynfo li {
+    list-style: none;
+}
+
+/* Main style (articles) */
+
+main {
+	max-width: 57.812em;
+	min-width: 20em;
+	overflow: hidden;
+	margin: 0 auto;
+	padding: 12px 0 0;
+	background: white;
+	background: rgba(255,255,255,0.85);
+}
+
+article {
+	overflow: hidden;
+}
+
+.article-header {
+	margin: 0 0 0.937em;
+	vertical-align: top;
+}
+
+.article-title {
+	max-width: 15.468em;
+	margin: 0.468em;
+	margin-bottom: 0.312em;
+}
+
+.article-meta {
+	max-width: 38.671em;
+	margin: 0.781em 1.171em 1.171em;
+	font-size: 0.8em;
+	color: #666;
+}
+
+.article-author {
+	display: inline;
+	font-style: normal;
+	font-weight: bold;
+}
+
+.article-content > * {
+	max-width: 30.937em;
+	margin: 0.937em;
+	padding-left: 0;
+	padding-right: 0;
+	border: none;
+	vertical-align: top;
+}
+
+.article-content > h2 {
+	max-width: 20.625em;
+	margin: 0.625em;
+}
+
+.article-content > h3 {
+	max-width: 26.442em;
+	margin: 0.801em;
+}
+
+.article-content > h5 {
+	max-width: 37.274em;
+	margin: 1.129em;
+}
+
+.article-content > h6 {
+	max-width: 46.175em;
+	margin: 1.399em;
+}
+
+aside {
+	padding: 0.937em;
+	background: white;
+	border: 1px solid #e1eaef;
+}
+
+aside h1,
+aside h2,
+aside h3,
+aside h4,
+aside h5,
+aside h6 {
+	font-size: 1em;
+}
+
+.la {
+	margin: 0.937em 0;	
+}
+
+.fw {
+	max-width: 31.875em;
+	margin: 0.937em 0;
+}
+
+.ra {
+	width: 20em;
+	margin: 0 0 0.937em auto;
+	padding-left: 0;
+	padding-right: 0;
+	border: none;
+	clear: both;
+}
+
+.more-block {
+	margin-top: -0.937em;
+	margin-bottom: 0;
+}
+
+.more {
+	float: right;
+	background: #6c7a98;
+	color: white;
+	width: 2.25em;
+	height: 2.25em;
+	border-radius: 1.625em;
+	padding: 0.5em;
+	margin-bottom: 0.937em;
+}
+
+.arrow-line {
+	display: inline-block;
+	background: white;
+	width: 50%;
+	height: 50%;
+	font-size: 0.46em;
+	line-height: 1.2em;
+	overflow: hidden;
+	vertical-align: middle;
+}
+
+.arrow-tri-r {
+	display: inline-block;
+	width: 0;
+	height: 0;
+	line-height: 0;
+	border-left: 1.125em solid white;
+	border-top: 1.125em solid transparent;
+	border-bottom: 1.125em solid transparent;
+	vertical-align: middle;
+}
+
+/* Specific aspect ratios */
+
+.ar1x4, .ar1x3, .ar9x21, .ar1x2, .ar10x19, .ar20x37, .ar9x16, .ar3x5, .ar10x16,
+.ar9x14, .ar2x3, .ar7x10, .ar1xs2, .ar8x11, .ar3x4, .ar4x5 {
+	height: 25em;
+}
+
+.ar4x5, .ar5x6, .ar1x1, .ar6x5, .ar5x4, .ar4x3, .ar11x8, .ars2x1, .ar10x7, .ar3x2, 
+.ar14x9, .ar16x10, .ar5x3, .ar16x9, .ar37x20, .ar19x10, .ar2x1, .ar21x9, .ar3x1, .ar4x1 {
+	width: 20em;
+}
+
+.ar1x4 {width: 6.25em;}
+.ar1x3 {width: 8.333em;}
+.ar9x21 {width: 10.714em;}
+.ar1x2 {width: 12.5em;}
+.ar10x19 {width: 13.157em;}
+.ar20x37 {width: 13.513em;}
+.ar9x16 {width: 14.062em;}
+.ar3x5 {width: 15em;}
+.ar10x16 {width: 15.625em;}
+.ar9x14 {width: 16.071em;}
+.ar2x3 {width: 16.666em;}
+.ar7x10 {width: 17.5em;}
+.ar1xs2 {width: 17.677em;}
+.ar8x11 {width: 18.181em;}
+.ar3x4 {width: 18.75em;}
+.ar5x6 {height: 24em;}
+.ar1x1{height: 20em;}
+.ar6x5{height: 16.666em;}
+.ar5x4{height: 16em;}
+.ar4x3{height: 15em;}
+.ar11x8{height: 14.545em;}
+.ars2x1{height: 14.142em;}
+.ar10x7{height: 14em;}
+.ar3x2{height: 13.333em;}
+.ar14x9{height: 12.857em;}
+.ar16x10{height: 12.5em;}
+.ar5x3{height: 12em;}
+.ar16x9{height: 11.25em;}
+.ar37x20{height: 10.810em;}
+.ar19x10{height: 10.526em;}
+.ar2x1{height: 10em;}
+.ar21x9{height: 8.571em;}
+.ar3x1{height: 6.666em;}
+.ar4x1{height: 5em;}
+
+/* Code highlighting */
+
+.highlight  { background: #fff; }
+pre { border: 1px solid #e1eaef; }
+.lineno { background: #e1eaef; display: inline-block; }
+.c, .cm, .c1 { color: #998;} /* Comment */
+.err { color: #a61717; background-color: #e3d2d2; } /* Error */
+.k, .o, .cp, .cs, .gs, .kc, .kd,
+.kp, .kr, .kt, .nc, .ne, .nf, .ow { font-weight: bold; } /* Keyword */
+.cp, .cs, .gh, .bp { color: #999; } /* Comment.Preproc */
+.cs, .c, .cm, .c1, .ge { font-style: italic; } /* Comment.Special */
+.gd, .gi { color: #000; }
+.gd { background-color: #fdd; } /* Generic.Deleted */
+.gd .x { background-color: #faa; } /* Generic.Deleted.Specific */
+.gr, .gt { color: #a00; } /* Generic.Error */
+.gi { background-color: #dfd; } /* Generic.Inserted */
+.gi .x { background-color: #afa; } /* Generic.Inserted.Specific */
+.go { color: #888; } /* Generic.Output */
+.gp, .nn { color: #555; } /* Generic.Prompt */
+.gu { color: #aaa; } /* Generic.Subheading */
+.kt, .nc { color: #458; } /* Keyword.Type */
+.m, .mf, .mh, .mi, .mo, .il { color: #099; } /* Literal.Number */
+.s, .sb, .sc, .sd, .s2, .se, .sh, .si, .sx, .s1 { color: #d14; } /* Literal.String */
+.na, .no, .nv, .vc, .vg, .vi { color: #008080; } /* Name.Attribute */
+.nb { color: #0086B3; } /* Name.Builtin */
+.ni { color: #800080; } /* Name.Entity */
+.ne, .nf { color: #900; } /* Name.Exception */
+.nt { color: #000080; } /* Name.Tag */
+.w { color: #bbb } /* Text.Whitespace */
+.sr { color: #009926; } /* Literal.String.Regex */
+.ss { color: #990073; } /* Literal.String.Symbol */
+
+/* Bottom pagination links */
+
+.pagenav-list {
+	padding: 0;
+	margin: 0;
+	line-height: 0.7em;
+}
+
+.pagenav-list li {
+	display: inline-block;
+	list-style: none;
+	line-height: 1em;
+	width: 50%;
+}
+
+.pagenav-list li:first-child:not(:only-child) a {
+	margin-right: 1px;
+}
+
+.pagenav-list li:only-child {
+	width: 100%;
+}
+
+.pagenav-list a {
+	display: block;
+	border-radius: 0;
+	height: 2.25em;
+	padding: 0.5em;
+	background: #161d2e;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #6c7a98;
+	overflow: hidden;
+}
+
+.pagenav-list a:hover {
+	box-shadow: none;
+}
+
+.page-nav:before {
+	content: " ";
+	display: block;
+	margin-bottom: 1px;
+	height: 2px;
+	background: #161d2e;
+	background-clip: content-box;
+	padding: 3px 0 2px;
+	border-bottom: 3px solid #161d2e;
+	border-top: 1px solid #161d2e;
+}
+
+.pagenav-text {
+	font-size: 1.25em;
+	vertical-align: middle;
+}
+
+.flrt {
+	float: right;
+}
+
+.arrow-square {
+	display: inline-block;
+	width: 2.25em;
+	height: 2.25em;
+	vertical-align: middle;
+}
+
+.arrow-tri-l {
+	display: inline-block;
+	width: 0;
+	height: 0;
+	line-height: 0;
+	border-right: 1.125em solid white;
+	border-top: 1.125em solid transparent;
+	border-bottom: 1.125em solid transparent;
+	vertical-align: middle;
+}
+
+/* Page footer */
+
+.page-footer {
+	max-width: 57.812em;
+	min-width: 20em;
+	overflow: hidden;
+	margin: 0.625em auto 1.875em;
+}
+
+.rf {
+	float: right;
+	margin-left: 0.937em;
+}
+
+.footer-links{
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	font-size: 0.8em;
+}
+
+.footer-links li {
+	display: inline-block;
+	list-style: none;
+	margin-left: 0.390em;
+}
+
+.footer-links a {
+	background: #6c7a98;
+	color: white;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers:
+ * http://juicystudio.com/article/screen-readers-display-none.php
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+/* if screen supports 400px wide, make right-aligned elements 400px wide (fits in full width layout) */
+
+@media (min-width: 26.25em) {
+	.la {
+		margin-left: 0.937em;
+	}
+
+	.ra {
+		width: 25em;
+	}
+	
+	/* specific aspect ratios */
+
+	.ar5x6, .ar1x1 {
+		height: 25em;
+	}
+
+	.ar1x1, .ar6x5, .ar5x4, .ar4x3, .ar11x8, .ars2x1, .ar10x7, .ar3x2, .ar14x9, .ar16x10, 
+	.ar5x3, .ar16x9, .ar37x20, .ar19x10, .ar2x1, .ar21x9, .ar3x1, .ar4x1 {
+		width: 25em;
+	}
+
+	.ar5x6 {width: 20.833em;}
+	.ar6x5{height: 20.833em;}
+	.ar5x4{height: 20em;}
+	.ar4x3{height: 18.75em;}
+	.ar11x8{height: 18.181em;}
+	.ars2x1{height: 17.677em;}
+	.ar10x7{height: 17.5em;}
+	.ar3x2{height: 16.666em;}
+	.ar14x9{height: 16.071em;}
+	.ar16x10{height: 15.625em;}
+	.ar5x3{height: 15em;}
+	.ar16x9{height: 14.062em;}
+	.ar37x20{height: 13.513em;}
+	.ar19x10{height: 13.157em;}
+	.ar2x1{height: 12.5em;}
+	.ar21x9{height: 10.714em;}
+	.ar3x1{height: 8.333em;}
+	.ar4x1{height: 6.25em;}
+}
+
+/* increase size of full text-width images to max when window is wide enough */
+
+@media (min-width: 33.125em) {
+	.fw .ar5x4, .fw .ar4x3, .fw .ar11x8, .fw .ars2x1, .fw .ar10x7, .fw .ar3x2, .fw .ar14x9, .fw .ar16x10, 
+	.fw .ar5x3, .fw .ar16x9, .fw .ar37x20, .fw .ar19x10, .fw .ar2x1, .fw .ar21x9, .fw .ar3x1, .fw .ar4x1 {
+		width: 31.875em;
+	}
+	
+	.fw .ar5x4{height: 25.5em;}
+	.fw .ar4x3{height: 23.906em;}
+	.fw .ar11x8{height: 23.181em;}
+	.fw .ars2x1{height: 22.539em;}
+	.fw .ar10x7{height: 22.312em;}
+	.fw .ar3x2{height: 21.25em;}
+	.fw .ar14x9{height: 20.491em;}
+	.fw .ar16x10{height: 19.921em;}
+	.fw .ar5x3{height: 19.125em;}
+	.fw .ar16x9{height: 17.929em;}
+	.fw .ar37x20{height: 17.229em;}
+	.fw .ar19x10{height: 16.776em;}
+	.fw .ar2x1{height: 15.937em;}
+	.fw .ar21x9{height: 13.660em;}
+	.fw .ar3x1{height: 10.625em;}
+	.fw .ar4x1{height: 7.968em;}
+}
+
+/* only start floating right aligned elements when there is enough room to their left for text flow */
+
+@media (min-width: 40em) {
+	.ra {
+		float: right;
+		margin-left: 0.937em;
+	}
+}
+
+/* move article meta data to the right of title when screen is wide enough */
+@media only screen and (min-width: 58.875em) {
+	.article-title {
+		display: inline-block;
+		width: 15.468em;
+		margin-bottom: 0;
+	}
+	
+	.article-meta {
+		display: inline-block;
+		width: 30.078em;
+		margin: 1.171em 0 0;
+		vertical-align: bottom;
+	}
+}
+
+/* at high enough res, move top nav to the left next to content */
+@media only screen and (min-width: 69.312em) {
+	body {
+		width: 68.062em;
+		margin: 0 auto;
+	}
+	
+	.page-header {
+		float: left;
+		width: 10.25em;
+		min-width: 0;
+	}
+	
+	.tt-logo {
+		display: block;
+		margin: 0.312em;
+	}
+	
+	.primary-nav {
+		display: block;
+		margin: 0;
+	}
+	
+	.primnav-list li {
+		display: block;
+	}
+	
+	main {
+		padding: 0;
+	}
+	
+	.page-footer {
+		margin: 0.625em 0 1.875em 10.25em;
+	}
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+	
+	mark {
+		background: #ff0 !important;
+	}
+	
+	main, .article-title, .article-meta,
+	.article-content > *, .page-footer {
+		max-width: none;
+	}
+	
+	.browserupgrade, .page-header, .page-nav, .footer-links  {
+		display: none;
+	}
+	
+	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+		text-decoration: none;
+	}
+	
+	h1 a[href]:after, h2 a[href]:after, h3 a[href]:after, 
+	h4 a[href]:after, h5 a[href]:after, h6 a[href]:after {
+		content: " ";
+	}
+	
+	.more {
+		width: auto;
+		height: auto;
+	}
+	
+	.arrow-line {
+		width: auto;
+		height: auto;
+		font-size: 1em;
+	}
+}

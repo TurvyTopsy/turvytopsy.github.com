@@ -1,0 +1,18 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Lafie
+    Site: https://turvytopsy.com
+
+# THANKS
+
+    The people behind:
+	HTML5 Boilerplate
+	Mozilla Developer Network
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5, ARIA, RSS 2.0
+    Normalize.css, html5shiv.js, schema.org
